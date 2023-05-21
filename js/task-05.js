@@ -1,17 +1,7 @@
-// const  nameInput = document.querySelector("#name-input");
-// const nameOut = document.querySelector("#name-output")
-// nameInput.addEventListener("input", (event) => {
-//     if (event.currentTarget.value) {
-//         nameOut.textContent = event.currentTarget.value;
-//     } 
-//     nameOut.textContent = !event.currentTarget.value
-// })
+
 const  nameInput = document.querySelector("#name-input");
-const nameOut = document.querySelector("#name-output")
-nameInput.addEventListener("input", (event) => {
-    if (!event.currentTarget.value) {
-        nameOut.innerHTML = 'Anonymous';
-        return
-    } 
-    nameOut.textContent = event.currentTarget.value
-})
+const nameOut = document.querySelector("#name-output");
+nameInput.addEventListener('input',onImputChangr)
+function onImputChangr(event){
+    nameOut.textContent=event.currentTarget.value
+}
