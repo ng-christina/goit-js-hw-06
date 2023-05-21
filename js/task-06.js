@@ -1,8 +1,10 @@
 const input = document.querySelector('#validation-input')
-input.addEventListener("click", () => {
-const dataLength = input.getAttribute( 'data-length');
-const valueLength = input.length;
-if (valueLength===dataLength  ) {
+input.addEventListener("blur", () => {
+const dataLength = parseInt(input.getAttribute( 'data-length'));
+const valueLength = input.value.length;
+// console.log( `data`, typeof dataLength);
+// console.log(`val` , typeof valueLength);
+if (dataLength === valueLength  ) {
  input.classList.add('valid')
  input.classList.remove('invalid');
 }else {  
@@ -10,5 +12,3 @@ if (valueLength===dataLength  ) {
      input.classList.remove('valid');
 }
 })
-
-
