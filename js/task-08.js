@@ -11,8 +11,10 @@ const {
   } = event.currentTarget;
  if (email.value === "" || password.value === "") {
  alert('Please fill in all the fields!');
+ return
  } else{
-   console.log(`Email : ${email.value}, password : ${password.value}`);
+  const result = `Email : ${email.value}, password : ${password.value}`
+   console.log(result);
  }
  event.currentTarget.reset()
 }
